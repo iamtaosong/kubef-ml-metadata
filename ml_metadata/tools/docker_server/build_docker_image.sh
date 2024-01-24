@@ -25,3 +25,6 @@ docker build -t ${DOCKER_IMAGE_REPO}:${DOCKER_IMAGE_TAG} -f ml_metadata/tools/do
 
 
 docker build -t kubef/ml_metadata_store_server:1.5.0 -f ml_metadata/tools/docker_server/${DOCKER_FILE} .
+
+
+docker build -t kubef/ml_metadata_store_server:1.5.0 .

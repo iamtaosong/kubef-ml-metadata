@@ -1,4 +1,4 @@
-FROM  gcr.io/tfx-oss-public/ml_metadata_store_server:1.8.0 as builder
+FROM  gcr.io/tfx-oss-public/ml_metadata_store_server:1.5.0 as builder
 
 FROM ubuntu:20.04
 
@@ -18,3 +18,6 @@ ENTRYPOINT \
   "/bin/metadata_store_server" \
   "--grpc_port=${GRPC_PORT}" \
   "--metadata_store_server_config_file=${METADATA_STORE_SERVER_CONFIG_FILE}"
+
+
+# https://github.com/google/ml-metadata/blob/v1.5.0/ml_metadata/tools/docker_server/Dockerfile
